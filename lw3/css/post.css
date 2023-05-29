@@ -25,9 +25,8 @@
 }
 
 .main__photo {
-    background: url(../images/the-road-ahead-post.png);
     background-size: cover;
-    background-position: center;
+    background: url(../images/the-road-ahead-post.png) center;
     width: auto;
     height: 530px;
 }

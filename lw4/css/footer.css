@@ -2,9 +2,8 @@
     color: white;
     font-weight: 300;
     text-decoration: none;
-    background: url(../images/FooterImage.png);
     background-size: cover;
-    background-position: center;
+    background: url(../images/FooterImage.png) center;
     position: relative;
     height: 380px;
 }

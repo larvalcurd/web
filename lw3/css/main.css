@@ -18,9 +18,8 @@
 }
 
 .intro {
-    background: url(../images/rock.png);
     background-size: cover;
-    background-position: center;
+    background: url(../images/rock.png) center;
     width: auto;
     height: 500px;
     color: white;
