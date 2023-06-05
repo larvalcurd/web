@@ -21,12 +21,12 @@ type featuredPostData struct {
 }
 
 type recentPostData struct {
-	Title     string
-	Subtitle  string
-	MainImg   string
-	Author    string
-	AuthorImg string
-	PubDate   string
+	Title         string
+	Subtitle      string
+	RecentPostImg string
+	Author        string
+	AuthorImg     string
+	PubDate       string
 }
 
 type postPage struct {
@@ -110,52 +110,52 @@ func featuredPosts() []featuredPostData {
 func recentPosts() []recentPostData {
 	return []recentPostData{
 		{
-			Title:     "Still Standing Tall",
-			Subtitle:  "Life begins at the end of your comfort zone.",
-			MainImg:   "/static/image/still-standing-tall.png",
-			Author:    "William Wong",
-			AuthorImg: "/static/image/william-wong.png",
-			PubDate:   "9/25/2015",
+			Title:         "Still Standing Tall",
+			Subtitle:      "Life begins at the end of your comfort zone.",
+			RecentPostImg: "/static/image/still-standing-tall.png",
+			Author:        "William Wong",
+			AuthorImg:     "/static/image/william-wong.png",
+			PubDate:       "9/25/2015",
 		},
 		{
-			Title:     "Sunny Side Up",
-			Subtitle:  "No place is ever as bad as they tell you it’s going to be.",
-			MainImg:   "/static/image/sunny-side-up.png",
-			Author:    "Mat Vogels",
-			AuthorImg: "/static/image/mat-vogels.png",
-			PubDate:   "9/25/2015",
+			Title:         "Sunny Side Up",
+			Subtitle:      "No place is ever as bad as they tell you it’s going to be.",
+			RecentPostImg: "/static/image/sunny-side-up.png",
+			Author:        "Mat Vogels",
+			AuthorImg:     "/static/image/mat-vogels.png",
+			PubDate:       "9/25/2015",
 		},
 		{
-			Title:     "Water Falls",
-			Subtitle:  "We travel not to escape life, but for life not to escape us.",
-			MainImg:   "/static/image/water-falls.png",
-			Author:    "Mat Vogels",
-			AuthorImg: "/static/image/mat-vogels.png",
-			PubDate:   "9/25/2015",
+			Title:         "Water Falls",
+			Subtitle:      "We travel not to escape life, but for life not to escape us.",
+			RecentPostImg: "/static/image/water-falls.png",
+			Author:        "Mat Vogels",
+			AuthorImg:     "/static/image/mat-vogels.png",
+			PubDate:       "9/25/2015",
 		},
 		{
-			Title:     "Through the Mist",
-			Subtitle:  "Travel makes you see what a tiny place you occupy in the world.",
-			MainImg:   "/static/image/through-the-mist.png",
-			Author:    "William Wong",
-			AuthorImg: "/static/image/william-wong.png",
-			PubDate:   "9/25/2015",
+			Title:         "Through the Mist",
+			Subtitle:      "Travel makes you see what a tiny place you occupy in the world.",
+			RecentPostImg: "/static/image/through-the-mist.png",
+			Author:        "William Wong",
+			AuthorImg:     "/static/image/william-wong.png",
+			PubDate:       "9/25/2015",
 		},
 		{
-			Title:     "Awaken Early",
-			Subtitle:  "Not all those who wander are lost.",
-			MainImg:   "/static/image/awaken-early.png",
-			Author:    "Mat Vogels",
-			AuthorImg: "/static/image/mat-vogels.png",
-			PubDate:   "9/25/2015",
+			Title:         "Awaken Early",
+			Subtitle:      "Not all those who wander are lost.",
+			RecentPostImg: "/static/image/awaken-early.png",
+			Author:        "Mat Vogels",
+			AuthorImg:     "/static/image/mat-vogels.png",
+			PubDate:       "9/25/2015",
 		},
 		{
-			Title:     "Try it Always",
-			Subtitle:  "The world is a book, and those who do not travel read only one page.",
-			MainImg:   "/static/image/try-it-always.png",
-			Author:    "Mat Vogels",
-			AuthorImg: "/static/image/mat-vogels.png",
-			PubDate:   "9/25/2015",
+			Title:         "Try it Always",
+			Subtitle:      "The world is a book, and those who do not travel read only one page.",
+			RecentPostImg: "/static/image/try-it-always.png",
+			Author:        "Mat Vogels",
+			AuthorImg:     "/static/image/mat-vogels.png",
+			PubDate:       "9/25/2015",
 		},
 	}
 }

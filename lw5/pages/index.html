@@ -52,29 +52,19 @@
                 <h3 class="main__header">Featured Posts</h3>
                 <hr class="main__hr">
                 <div class="most__featured__posts__block">
-                    <div class="main__most__featured__posts" style="background: url(images/the-road-ahead.png); background-size: cover;">
+                    {{ range .FeaturedPosts }}
+                    <div class="main__most__featured__posts" style="background: url({{ .PostImg }});">
                         <div class="most__featured__post__content">
-                            <h3 class="most__featured__post__header">The Road Ahead</h3>
-                            <p class="most__featured__post__info">The road ahead might be paved - it might not be.</p>
+                            <h3 class="most__featured__post__header">{{ .Title }}</h3>
+                            <p class="most__featured__post__info">{{ .Subtitle }}.</p>
                             <div class="most__featured__post__author">
-                                <img src="images/mat-vogels.png" alt="Mat Vogels">
-                                <p class="most__featured__post__author__info">Mat Vogels</p>
-                                <p class="most__featured__post__date">September 25, 2015</p>
+                                <img src="{{ .AuthorImg }}" alt="{{ .Author }}">
+                                <p class="most__featured__post__author__info">{{ .Author }}</p>
+                                <p class="most__featured__post__date">{{ .PubDate }}</p>
                             </div>
                         </div>
                     </div>
-                    <div class="main__most__featured__posts" style="background: url(images/from-top-to-down.png);">
-                        <p class="most__featured__post__sign">ADVENTURE</p>
-                        <div class="most__featured__post__content">
-                            <h3 class="most__featured__post__header">From Top Down</h3>
-                            <p class="most__featured__post__info">Once a year, go someplace you’ve never been before.</p>
-                            <div class="most__featured__post__author">
-                                <img src="images/william-wong.png" alt="William Wong">
-                                <p class="most__featured__post__author__info">William Wong</p>
-                                <p class="most__featured__post__date">September 25, 2015</p>
-                            </div>
-                        </div>
-                    </div>
+                    {{ end }}
                 </div>
             </div>
 
@@ -82,78 +72,20 @@
                 <h3 class="main__header">Most Recent</h3>
                 <hr class="main__hr">
                 <div class="most__recent__posts__block">
-                <div class="most__recent__post">
-                    <img class="most__recent__post__picture" src="images/still-standing-tall.png" alt="Post 3 Picture">
-                    <div class="most__recent__post__content">
-                        <h3 class="most__recent__post__header">Still Standing Tall</h3>
-                        <p class="most__recent__post__info">Life begins at the end of your comfort zone.</p>
-                    </div>
-                    <div class="most__recent__post__author">
-                        <img src="images/william-wong.png" alt="William Wong">
-                        <p class="most__recent__post__author__info">William Wong</p>
-                        <p class="most__recent__post__author__date">9/25/2015</p>
-                    </div>
-                </div>
-                <div class="most__recent__post">
-                    <img class="most__recent__post__picture" src="images/sunny-siade-up.png" alt="Post 4 Picture">
-                    <div class="most__recent__post__content">
-                        <h3 class="most__recent__post__header">Sunny Side Up</h3>
-                        <p class="most__recent__post__info">No place is ever as bad as they tell you it’s going to be.</p>
-                    </div>
-                    <div class="most__recent__post__author">
-                        <img src="images/mat-vogels.png" alt="Mat Vogels">
-                        <p class="most__recent__post__author__info">Mat Vogels</p>
-                        <p class="most__recent__post__author__date">9/25/2015</p>
-                    </div>
-                </div>
-                <div class="most__recent__post">
-                    <img class="most__recent__post__picture" src="images/water-falls.png" alt="Post 5 Picture">
-                    <div class="most__recent__post__content">
-                        <h3 class="most__recent__post__header">Water Falls</h3>
-                        <p class="most__recent__post__info">We travel not to escape life, but for life not to escape us.</p>
-                    </div>
-                    <div class="most__recent__post__author">
-                        <img src="images/mat-vogels.png" alt="Mat Vogels">
-                        <p class="most__recent__post__author__info">Mat Vogels</p>
-                        <p class="most__recent__post__author__date">9/25/2015</p>
-                    </div>
-                </div>
-                <div class="most__recent__post">
-                    <img class="most__recent__post__picture" src="images/through-the-mist.png" alt="Post 6 Picture">
-                    <div class="most__recent__post__content">
-                        <h3 class="most__recent__post__header">Through the Mist</h3>
-                        <p class="most__recent__post__info">Travel makes you see what a tiny place you occupy in the world.</p>
-                    </div>
-                    <div class="most__recent__post__author">
-                        <img src="images/william-wong.png" alt="William Wong">
-                        <p class="most__recent__post__author__info">William Wong</p>
-                        <p class="most__recent__post__author__date">9/25/2015</p>
-                    </div>
-                </div>
-                <div class="most__recent__post">
-                    <img class="most__recent__post__picture" src="images/awaken-early.png" alt="Post 7 Picture">
-                        <div class="most__recent__post__content">
-                        <h3 class="most__recent__post__header">Awaken Early</h3>
-                        <p class="most__recent__post__info">Not all those who wander are lost.</p>
-                    </div>
-                    <div class="most__recent__post__author">
-                        <img src="images/mat-vogels.png" alt="Mat Vogels">
-                        <p class="most__recent__post__author__info">Mat Vogels</p>
-                        <p class="most__recent__post__author__date">9/25/2015</p>
-                    </div>
-                </div>
-                <div class="most__recent__post">
-                    <img class="most__recent__post__picture" src="images/try-it-always.png" alt="Post 8 Picture">
-                    <div class="most__recent__post__content">
-                        <h3 class="most__recent__post__header">Awaken Early</h3>
-                        <p class="most__recent__post__info">Not all those who wander are lost.</p>
-                    </div>
-                    <div class="most__recent__post__author">
-                        <img src="images/mat-vogels.png" alt="Mat Vogels">
-                        <p class="most__recent__post__author__info">Mat Vogels</p>
-                        <p class="most__recent__post__author__date">9/25/2015</p>
-                    </div>
-                </div>
+                    {{ range .RecentPosts }}
+                        <div class="most__recent__post">
+                            <img class="most__recent__post__picture" src="{{ .RecentPostImg }}" alt="{{ .Title }}">
+                            <div class="most__recent__post__content">
+                                <h3 class="most__recent__post__header">{{ .Title }}</h3>
+                                <p class="most__recent__post__info">{{ .SubTitle }}</p>
+                            </div>
+                            <div class="most__recent__post__author">
+                                <img src="{{ .AuthorImg }}" alt="{{ .Author }}">
+                                <p class="most__recent__post__author__info">{{ .Author }}</p>
+                                <p class="most__recent__post__author__date">{{ .PubDate }}</p>
+                            </div>
+                        </div>
+                    {{ end }}
                 </div>
             </div>
         </div>
