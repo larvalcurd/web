@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Escape.</title>
+        <link rel="stylesheet" href="../static/styles/main.css">
+        <link rel="stylesheet" href="../static/styles/footer.css">
+        <link rel="stylesheet" href="../static/styles/base.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header__inner">
+                <div>
+                    <h2 class="header__logo">Escape.</h2>
+                </div>
+                <div class="header__link-block">
+                    <a href="#" class="header__link">HOME</a>
+                    <a href="#" class="header__link">CATEGORIES</a>
+                    <a href="#" class="header__link">ABOUT</a>
+                    <a href="#" class="header__link">CONTACT</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="intro">
+            <div class="intro__container">
+                <h1 class="intro__title">Let's do it together.</h1>
+                <h4 class="intro__subtitle">We travel the world in search of stories. Come Along for the ride</h4>
+                <button class="intro__button">Vies Latest Posts</button>
+            </div>
+        </div>
+
+        <div class="topic__nav">
+            <div class="topic__nav__block">
+                <a href="#" class="topic__nav__link">Nature</a>
+                <a href="#" class="topic__nav__link">Photography</a>
+                <a href="#" class="topic__nav__link">Relaxation</a>
+                <a href="#" class="topic__nav__link">Vacation</a>
+                <a href="#" class="topic__nav__link">Travel</a>
+                <a href="#" class="topic__nav__link">Adventure</a>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="main__featured__posts">
+                <h3 class="main__header">Featured Posts</h3>
+                <hr class="main__hr">
+                <div class="most__featured__posts__block">
+                    {{ range .FeaturedPosts }}
+                    <div class="main__most__featured__posts" style="background: url({{ .PostImg }});">
+                        <div class="most__featured__post__content">
+                            <h3 class="most__featured__post__header">{{ .Title }}</h3>
+                            <p class="most__featured__post__info">{{ .SubTitle }}.</p>
+                            <div class="most__featured__post__author">
+                                <img src="{{ .AuthorImg }}" alt="{{ .Author }}">
+                                <p class="most__featured__post__author__info">{{ .Author }}</p>
+                                <p class="most__featured__post__date">{{ .PubDate }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+
+            <div class="main__recent__posts">
+                <h3 class="main__header">Most Recent</h3>
+                <hr class="main__hr">
+                <div class="most__recent__posts__block">
+                    {{ range .RecentPosts }}
+                        <div class="most__recent__post">
+                            <img class="most__recent__post__picture" src="{{ .RecentPostImg }}" alt="{{ .Title }}">
+                            <div class="most__recent__post__content">
+                                <h3 class="most__recent__post__header">{{ .Title }}</h3>
+                                <p class="most__recent__post__info">{{ .SubTitle }}</p>
+                            </div>
+                            <div class="most__recent__post__author">
+                                <img src="{{ .AuthorImg }}" alt="{{ .Author }}">
+                                <p class="most__recent__post__author__info">{{ .Author }}</p>
+                                <p class="most__recent__post__author__date">{{ .PubDate }}</p>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="footer">
+            <div class="footer__form form">
+                <h3 class="form__header">Stay in Touch</h3>
+                <hr class="form__hr">
+                <div class="form__block">
+                    <input type="text" name="email" placeholder="Enter your email address" class="form__input">
+                    <button type="button" class="form__button"><span style="opacity: 100%;">Sumbit</span></button>
+                </div>
+            </div>
+            <div class="footer__inner">
+                <div>
+                    <h2 class="footer__header">Escape.</h2>
+                </div>
+                <div class="footer__link-block">
+                    <a href="#" class="footer__link">HOME</a>
+                    <a href="#" class="footer__link">CATEGORIES</a>
+                    <a href="#" class="footer__link">ABOUT</a>
+                    <a href="#" class="footer__link">CONTACT</a>
+                </div>
+            </div>
+            <div class="footer__background"></div> 
+        </div>
+    </body>
+
+</html>
