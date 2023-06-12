@@ -31,6 +31,49 @@ type recentPostData struct {
 	PubDate       string `db:"publish_date"`
 }
 
+func index(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
+	return func(w http.ResponseWriter, r *http.Request) {
+		ts, err := template.ParseFiles("pages/index.html")
+
+		if err != nil {
+			http.Error(w, "Internal Server Error 1", 500)
+			log.Println(err.Error())
+			return
+		}
+
+		featured, err := featuredPosts(db)
+
+		if err != nil {
+			http.Error(w, "Internal Server Error featured", 500)
+			log.Fatal(err)
+			return
+		}
+
+		recent, err := recentPosts(db)
+
+		if err != nil {
+			http.Error(w, "Internal Server Error recent", 500)
+			log.Fatal(err)
+			return
+		}
+
+		data := indexPage{
+			FeaturedPosts: featured,
+			RecentPosts:   recent,
+		}
+
+		err = ts.Execute(w, data)
+		if err != nil {
+			http.Error(w, "Internal Server Error 2", 500)
+			log.Println(err)
+			return
+		}
+
+		log.Println("Request completed successfully")
+
+	}
+}
+
 func featuredPosts(client *sqlx.DB) ([]featuredPostData, error) {
 	const query = `
 		SELECT
@@ -77,44 +120,4 @@ func recentPosts(client *sqlx.DB) ([]recentPostData, error) {
 		return nil, err
 	}
 	return posts, nil
-}
-
-func index(client *sqlx.DB) func(http.ResponseWriter, *http.Request) {
-	return func(w http.ResponseWriter, r *http.Request) {
-		ts, err := template.ParseFiles("pages/index.html")
-
-		if err != nil {
-			http.Error(w, "Internal Server Error 1", 500)
-			log.Println(err.Error())
-			return
-		}
-
-		featured, err := featuredPosts(client)
-
-		if err != nil {
-			http.Error(w, "Internal Server Error featured", 500)
-			log.Fatal(err)
-			return
-		}
-
-		recent, err := recentPosts(client)
-
-		if err != nil {
-			http.Error(w, "Internal Server Error recent", 500)
-			log.Fatal(err)
-			return
-		}
-
-		data := indexPage{
-			FeaturedPosts: featured,
-			RecentPosts:   recent,
-		}
-
-		err = ts.Execute(w, data)
-		if err != nil {
-			http.Error(w, "Internal Server Error 2", 500)
-			log.Println(err)
-			return
-		}
-	}
 }

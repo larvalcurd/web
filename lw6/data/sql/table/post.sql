@@ -1,4 +1,4 @@
--- Active: 1686504379509@@127.0.0.1@3306@blog
+-- Active: 1686583944049@@127.0.0.1@3306@blog
 CREATE TABLE post
 (
    `post_id`      INT NOT NULL AUTO_INCREMENT,
