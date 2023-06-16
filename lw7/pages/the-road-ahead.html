@@ -36,9 +36,11 @@
 
         <div class="main">
             <div class="main__photo"></div>
+            {{  range .Text }}
             <div class="main__text">
-                <p class="main__paragraph">{{ .Text }}</p>
+                <p class="main__paragraph">{{ .Texting }}</p>
             </div>
+            {{ end }}
         </div>
 
         <div class="footer">

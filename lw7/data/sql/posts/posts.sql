@@ -1,4 +1,4 @@
--- Active: 1686915022131@@127.0.0.1@3306@blog
+-- Active: 1686583944049@@127.0.0.1@3306@blog
 INSERT INTO post (title, subtitle, image_url, author, author_url, publish_date, featured) VALUES ('The Road Ahead', 'The road ahead might be paved - it might not be.', '../static/images/the-road-ahead-post.png', 'Mat Vogels', '../static/images/mat-vogels.png', '29/05/2015', 1);
 INSERT INTO post (title, subtitle, image_url, author, author_url, publish_date, featured) VALUES ('From Top Down', 'Once a year, go someplace you have never been before.', '../static/images/from-top-to-down.png', 'William Wong', '../static/images/william-wong.png', '29/05/2015', 1);
 INSERT INTO post (title, subtitle, image_url, author, author_url, publish_date, featured) VALUES ('Still Standing Tall', 'Life begins at the end of your comfort zone.', '../static/images/still-standing-tall.png', 'William Wong', '../static/images/william-wong.png', '29/05/2015', 0);
